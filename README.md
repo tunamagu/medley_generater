@@ -13,10 +13,14 @@ mp3ファイルからサビを抜き出し、結合してサビメドレーを�
 ディレクトリ構成は以下の通り
 
 Folder
-  |- medley_generater.sh
-  |- 63Rising Hope.mp3
-  |- 43STARTING NOW!.mp3
-  |- ・・・
+
+|- medley_generater.sh 
+
+|- 63Rising Hope.mp3
+
+|- 43STARTING NOW!.mp3
+
+|- ・・・
   
   
 結合ファイルは ./after_cut/output.mp3

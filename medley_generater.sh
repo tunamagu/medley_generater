@@ -2,6 +2,7 @@
 
 mkdir after_cut
 count=0
+cut_time=11
 
 # 分割処理
 for file in *.mp3
@@ -10,7 +11,7 @@ do
 	imput_number=`echo ${file} | cut -c 1-2`
 	start_number=$(expr $imput_number - 1)
 	count=$((++count))
-	ffmpeg -y -i "$file" -codec:a copy -ss $start_number -t 11 "./after_cut/$count.mp3"
+	ffmpeg -y -i "$file" -codec:a copy -ss $start_number -t $cut_time "./after_cut/$count.mp3"
 done
 
 cd after_cut
@@ -28,11 +29,6 @@ do
 	cut_file_list="${cut_file_list}-i ${file_new} "
 	count=$((++count))
 
-	# テスト用件数指定
-	# if test 3 -lt $count
-	# then
-	# 	break
-	# fi
 done
 
 # 結合処理
